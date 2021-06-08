@@ -10,9 +10,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.white10,
+        //backgroundColor: Colors.white10,
         body: SafeArea(
-          child: Column(
+          child: Row(
             //mainAxisSize: MainAxisSize.min,
             // verticalDirection: VerticalDirection.up,
             //verticalDirection: VerticalDirection.down,
@@ -31,16 +31,23 @@ class MyApp extends StatelessWidget {
                   child: Text('Container 1'),
                 ),
               ),
-              Container(
-                height: 100,
-                //width: 100,
-                color: Colors.blueGrey,
-                child: Text('Container 2'),
+              SizedBox(
+                height: 20,
+                width: 20,
               ),
               Container(
                 height: 100,
                 //width: 100,
-                color: Colors.blue,
+                color: Colors.red,
+                child: Text('Container 2'),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Container(
+                height: 100,
+                //width: 100,
+                color: Colors.green,
                 child: Text('Container 3'),
               )
             ],
