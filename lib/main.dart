@@ -10,45 +10,33 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        //backgroundColor: Colors.white10,
+        backgroundColor: Colors.white70,
         body: SafeArea(
-          child: Row(
-            //mainAxisSize: MainAxisSize.min,
-            // verticalDirection: VerticalDirection.up,
-            //verticalDirection: VerticalDirection.down,
-            //mainAxisAlignment: MainAxisAlignment.end,
-            // mainAxisAlignment: MainAxisAlignment.center,
-            //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            // mainAxisAlignment: MainAxisAlignment.spaceAround,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              Container(
-                height: 100.0,
-                //width: 100.0,
-                color: Colors.white,
-                child: Center(
-                  child: Text('Container 1'),
+          child: Column(
+            children: [
+              CircleAvatar(
+                radius: 50,
+                backgroundColor: Colors.red,
+                backgroundImage: AssetImage('assets/images/bird.jpg'),
+              ),
+              Text(
+                'Robin Crowned',
+                style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontSize: 40,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(
-                height: 20,
-                width: 20,
-              ),
-              Container(
-                height: 100,
-                //width: 100,
-                color: Colors.red,
-                child: Text('Container 2'),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Container(
-                height: 100,
-                //width: 100,
-                color: Colors.green,
-                child: Text('Container 3'),
+              Text(
+                'FLUTTER DEVELOPER',
+                style: TextStyle(
+                  fontFamily: 'Source Sans Pro',
+                  fontSize: 20,
+                  color: Colors.white70,
+                  letterSpacing: 2.5,
+                  fontWeight: FontWeight.bold,
+                ),
               )
             ],
           ),
