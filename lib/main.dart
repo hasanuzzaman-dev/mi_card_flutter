@@ -61,26 +61,20 @@ class MyApp extends StatelessWidget {
                   ],
                 ),
               ),
-              Container(
+              Card(
                 color: Colors.white,
-                padding: EdgeInsets.all(10.0),
                 margin: EdgeInsets.symmetric(vertical: 10, horizontal: 16),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.email,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.black87,
+                  ),
+                  title: Text(
+                    'hasan@gmail.com',
+                    style: TextStyle(
                       color: Colors.black87,
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      'hasan@gmail.com',
-                      style: TextStyle(
-                        color: Colors.black87,
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
               )
             ],
@@ -90,3 +84,24 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+/*child: Padding(
+padding: const EdgeInsets.all(10.0),
+child: Row(
+children: [
+Icon(
+Icons.email,
+color: Colors.black87,
+),
+SizedBox(
+width: 10,
+),
+Text(
+'hasan@gmail.com',
+style: TextStyle(
+color: Colors.black87,
+),
+),
+],
+),
+),*/
