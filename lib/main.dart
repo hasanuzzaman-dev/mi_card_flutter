@@ -10,9 +10,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.white70,
+        backgroundColor: Colors.blueGrey,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CircleAvatar(
                 radius: 50,
@@ -38,27 +39,29 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Container(
+              SizedBox(
+                height: 20.0,
+                width: 150.0,
+                child: Divider(
+                  color: Colors.blueGrey.shade100,
+                ),
+              ),
+              Card(
                 color: Colors.white,
-                padding: EdgeInsets.all(10.0),
                 margin:
                     EdgeInsets.symmetric(vertical: 16.00, horizontal: 16.00),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.phone,
-                      color: Colors.black54,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.black,
+                  ),
+                  title: Text(
+                    '+8801921681616',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontFamily: 'Source Sans Pro',
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      '+8801921681616',
-                      style: TextStyle(
-                        color: Colors.black87,
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
               ),
               Card(
@@ -73,6 +76,7 @@ class MyApp extends StatelessWidget {
                     'hasan@gmail.com',
                     style: TextStyle(
                       color: Colors.black87,
+                      fontFamily: 'Source Sans Pro',
                     ),
                   ),
                 ),
